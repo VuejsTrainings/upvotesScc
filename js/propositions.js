@@ -2,7 +2,7 @@ const LesPropositions = [
     {
         id:1,
         titre:'Avoir des week-ends de 3 jours',
-        description:'Allonger le week-end et l\'étendre aussi au lundi pour tout le personnel de l\'entreprise.',
+        description:'<strong>Allonger le week-end</strong> et l\'étendre aussi au lundi pour tout le personnel de l\'entreprise.',
         votes:30,
         image:'img/beach.jpg',
         auteur : {

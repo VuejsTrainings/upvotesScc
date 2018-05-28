@@ -15,22 +15,26 @@
                 UpVotes!
             </h1>
             <section class="row justify-content-md-center">
-                <article class="media col-md-7 proposition">
-                    <img class="mr-3" src="img/zz.jpg" alt="ZZ">
+                <article class="media col-md-7 proposition" v-for="proposition in propositionsPopulaires">
+                    <img class="mr-3" v-bind:src="proposition.image" alt="ZZ">
                     <div class="media-body">
                         <h5>
-                            Désigner Zinedine Zidane sélectionneur de l'équipe de France
-                            <label for="" class="badge badge-secondary">#3</label>
+                            {{ proposition.titre }}
+                            <label for="" class="badge badge-secondary">
+                                #{{ proposition.id }}
+                            </label>
                         </h5>
-                        <p>
-                            A la fin de la Coupe du Monde, et quelque soit le résultat de l'équipe de France, installer Zizou à la tête de la sélection nationale.
+                        <p v-html="proposition.description">
+                            
                         </p>
-                        <p class=""><img src="img/avatars/benz.jpg" alt=""> KB Madrid
-                            </p>
+                        <p class="">
+                            <img v-bind:src="proposition.auteur.image" alt=""> 
+                            {{ proposition.auteur.nom }}
+                        </p>
                     </div>
                     <div col="mr-2">
-                        <i class="fa fa-chevron-up"></i>
-                        35
+                        <a href="#" title="Je vote pour cette proposition!" v-on:click="voteUp(proposition)"> <i class="fa fa-chevron-up"></i> </a>
+                        {{ proposition.votes }}
                     </div>
                 </article>
                 
