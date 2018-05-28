@@ -1,4 +1,4 @@
-const propositions = [
+const LesPropositions = [
     {
         id:1,
         titre:'Avoir des week-ends de 3 jours',
