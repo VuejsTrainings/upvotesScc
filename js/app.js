@@ -6,9 +6,8 @@ new Vue({
             return this.propositions.sort( (a,b) => b.votes - a.votes );
         }
     },
-    methods:{
-        voteUp(prop){
-            prop.votes++;
-        }
+    components:{
+        'prop-component': propositionComposant
     }
+    
 });

@@ -8,3 +8,7 @@
 h1{
     margin-bottom:2em;
 }
+
+.proposition > div{ 
+    width:100%;
+}
