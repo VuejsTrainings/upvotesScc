@@ -15,8 +15,11 @@
                 UpVotes!
             </h1>
             <section class="row justify-content-md-center">
-                <article class="col-md-7 proposition" v-for="proposition in propositionsPopulaires">
-                    <prop-component v-bind:proposition="proposition"></prop-component>
+                <article class="col-md-7 proposition" 
+                    v-for="proposition in propositionsPopulaires"
+                    :class="{ hot: proposition.votes >= 35 }"
+                    >
+                    <prop-component :proposition="proposition"></prop-component>
                 </article>
                 
             </section>

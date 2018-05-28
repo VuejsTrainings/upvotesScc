@@ -7,7 +7,7 @@ const propositionComposant = {
     },
     template:`
         <div class="media">
-            <img class="mr-3" v-bind:src="proposition.image" alt="ZZ">
+            <img class="mr-3" :src="proposition.image" alt="ZZ">
             <div class="media-body">
                 <h5>
                     {{ proposition.titre }}
@@ -19,12 +19,12 @@ const propositionComposant = {
                     
                 </p>
                 <p class="">
-                    <img v-bind:src="proposition.auteur.image" alt=""> 
+                    <img :src="proposition.auteur.image" alt=""> 
                     {{ proposition.auteur.nom }}
                 </p>
             </div>
             <div col="mr-2">
-                <a href="#" title="Je vote pour cette proposition!" v-on:click="voteUp(proposition)"> <i class="fa fa-chevron-up"></i> </a>
+                <a href="#" title="Je vote pour cette proposition!" @click="voteUp(proposition)"> <i class="fa fa-chevron-up"></i> </a>
                 {{ proposition.votes }}
             </div>
         </div>
