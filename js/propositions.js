@@ -42,16 +42,5 @@ const propositions = [
             nom:'Tan Ed',
             image:'img/avatars/taned.jpg'
         }
-    },
-    {
-        id:0,
-        titre:'',
-        description:'',
-        votes:0,
-        image:'',
-        auteur : {
-            nom:'',
-            image:''
-        }
-    },
+    }
 ];
